@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    "terminal.integrated.fontSize": 9,
+    "editor.fontSize": 10
+}
