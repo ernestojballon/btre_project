@@ -3,5 +3,6 @@
     "terminal.integrated.fontSize": 9,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
-    "editor.fontSize": 10
+    "editor.fontSize": 10,
+    "html.format.wrapLineLength": 60
 }

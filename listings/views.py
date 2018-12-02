@@ -4,11 +4,8 @@ from .models import Listing
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from listings.choices import price_choices, bedroom_choices,states_choices
 
-
-
 def index(request):
     listings = Listing.objects.all()
-
     paginator = Paginator(listings,3)
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
