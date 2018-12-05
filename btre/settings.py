@@ -133,13 +133,21 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'btre/static')
 ]
 
-#media folder settings
+#Media folder settings
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
 
-# messages
+#Messages
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+
+# EMAIL config
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'ernestoballono@gmail.com'
+EMAIL_HOST_PASSWORD = 'sgkm2323'
