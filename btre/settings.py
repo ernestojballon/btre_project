@@ -25,7 +25,7 @@ SECRET_KEY = 's3ii&cjmkwi0v_y0(%29wav8_^7k6@p8*21uu&b9n0vc@v5)ez'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['167.99.225.57']
 
 
 # Application definition
@@ -84,7 +84,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'btredb',
-        'USER': 'root',
+        'USER': 'btre_django',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',
         'PORT': '3306',
