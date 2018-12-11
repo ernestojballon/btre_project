@@ -6,12 +6,17 @@ from listings.choices import price_choices, bedroom_choices,states_choices
 
 def index(request):
     listings = Listing.objects.order_by('-list_date').filter(is_published = True)[:3]
-    bd = sorted(bedroom_choices.items(),key = lambda x : x[1])
+
+    # with the next line we just sorted the dictionary 
+    bedroom_choices_sorted = sorted(bedroom_choices.items(),key = lambda x : x[1])
+    states_choices_sorted = sorted(states_choices.items(),key = lambda x : x[1])
+    price_choices_sorted = sorted(price_choices.items(),key = lambda x : x[1])
+
     context = {
         'listings': listings,
-        'states_choices': states_choices,
-        'price_choices' :price_choices,
-        'bedroom_choices': bd
+        'states_choices': states_choices_sorted,
+        'price_choices' :price_choices_sorted,
+        'bedroom_choices': bedroom_choices_sorted
     }
     return render(request,'pages/index.html',context)
 
