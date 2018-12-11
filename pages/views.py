@@ -10,7 +10,7 @@ def index(request):
     # with the next line we just sorted the dictionary 
     bedroom_choices_sorted = sorted(bedroom_choices.items(),key = lambda x : x[1])
     states_choices_sorted = sorted(states_choices.items(),key = lambda x : x[1])
-    price_choices_sorted = sorted(price_choices.items(),key = lambda x : x[1])
+    price_choices_sorted = sorted(price_choices.items(),key = lambda x : x[0])
 
     context = {
         'listings': listings,

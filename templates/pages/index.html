@@ -35,7 +35,7 @@
                         <option selected="true" disabled="disabled">State (All)</option>
                         {% if states_choices %}
                             
-                            {% for k,v in states_choices.items %}
+                            {% for k,v in states_choices %}
                               <option value="{{k}}">{{v}}</option>
                             {% endfor %}
                         {% endif %}
@@ -63,7 +63,7 @@
                       <select name="price" class="form-control" id="type">
                         <option selected="true" disabled="disabled">Max Price (Any)</option>
                         {% if states_choices %}
-                            {% for k,v in price_choices.items %}
+                            {% for k,v in price_choices %}
                               <option value="{{k}}">{{v}}</option>
                             {% endfor %}
                         {% endif %}
