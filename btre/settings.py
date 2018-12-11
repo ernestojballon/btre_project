@@ -25,7 +25,7 @@ SECRET_KEY = 's3ii&cjmkwi0v_y0(%29wav8_^7k6@p8*21uu&b9n0vc@v5)ez'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['167.99.225.57']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,16 +80,6 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'btredb',
-        'USER': 'btre_django',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-    }
-}
 
 
 # Password validation
@@ -149,6 +139,6 @@ MESSAGE_TAGS = {
 
 
 try:
-    from .local_settings import *
+    from .local_setting import *
 except ImportError:
     pass
