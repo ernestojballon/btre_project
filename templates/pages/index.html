@@ -34,6 +34,7 @@
                       <select name="state" class="form-control">
                         <option selected="true" disabled="disabled">State (All)</option>
                         {% if states_choices %}
+                            
                             {% for k,v in states_choices.items %}
                               <option value="{{k}}">{{v}}</option>
                             {% endfor %}
@@ -52,7 +53,7 @@
                       <select name="bedrooms" class="form-control">
                         <option selected="true" disabled="disabled">Bedrooms (All)</option>
                         {% if bedroom_choices %}
-                            {% for k,v in bedroom_choices.items %}
+                            {% for k,v in bedroom_choices %}
                               <option value="{{k}}">{{v}}</option>
                             {% endfor %}
                         {% endif %}
