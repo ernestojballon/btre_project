@@ -6,12 +6,12 @@ from listings.choices import price_choices, bedroom_choices,states_choices
 
 def index(request):
     listings = Listing.objects.order_by('-list_date').filter(is_published = True)[:3]
-
+    bd = sorted(bedroom_choices.items(),key = lambda x : x[1])
     context = {
         'listings': listings,
         'states_choices': states_choices,
         'price_choices' :price_choices,
-        'bedroom_choices': bedroom_choices
+        'bedroom_choices': bd
     }
     return render(request,'pages/index.html',context)
 
