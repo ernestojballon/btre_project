@@ -41,12 +41,12 @@ def contact(request):
         # )
         ###############################################################
         # Second way with the EmailMultiAlternatives method 
-        subject, from_email, to = 'site Registration', 'support@site.com', 'ernestoballono@gmail.com'
-        text_content = 'Click on link to finish registration'
-        html_content = '<html><body><a href="http://127.0.0.1:8000/listings/' + listing_id +'">Click Here</a></body></html>'
-        msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
-        msg.attach_alternative(html_content, "text/html")
-        msg.send()
+        # subject, from_email, to = 'site Registration', 'support@site.com', 'ernestoballono@gmail.com'
+        # text_content = 'Click on link to finish registration'
+        # html_content = '<html><body><a href="http://127.0.0.1:8000/listings/' + listing_id +'">Click Here</a></body></html>'
+        # msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+        # msg.attach_alternative(html_content, "text/html")
+        # msg.send()
 
 
 
