@@ -70,13 +70,18 @@ def search(request):
     # page = request.GET.get('page')
     # paginator = Paginator(paged_queryset_listing,3)
     # paged_queryset_listing = paginator.get_page(page)
-    
+    # with the next line we just sorted the dictionary 
+    bedroom_choices_sorted = sorted(bedroom_choices.items(),key = lambda x : x[1])
+    states_choices_sorted = sorted(states_choices.items(),key = lambda x : x[1])
+    price_choices_sorted = sorted(price_choices.items(),key = lambda x : x[0])
+
     context = {
         'listings':paged_queryset_listing,
-        'states_choices': states_choices,
-        'price_choices' :price_choices,
-        'bedroom_choices': bedroom_choices,
+        'states_choices': states_choices_sorted,
+        'price_choices' :price_choices_sorted,
+        'bedroom_choices': bedroom_choices_sorted,
         'values': request.GET
+    } 
     }
 
     return render(request,'listings/search.html', context)

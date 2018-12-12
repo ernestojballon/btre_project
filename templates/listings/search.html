@@ -28,7 +28,7 @@
                             
                             <option selected="true" disabled="disabled">State (All)</option>
                             {% if states_choices %}
-                            {% for k,v in states_choices.items %}
+                            {% for k,v in states_choices %}
                               <option value="{{k}}"
                                 {% if values.state == k  %}
                                     selected
@@ -46,7 +46,7 @@
                     <select name="bedrooms" class="form-control">
                       <option selected="true" disabled="disabled">Bedrooms (Any)</option>
                       {% if bedroom_choices %}
-                            {% for k,v in bedroom_choices.items %}
+                            {% for k,v in bedroom_choices %}
                               <option value="{{k}}" 
                               {% if values.bedrooms == k  %}
                                     selected
@@ -59,7 +59,7 @@
                     <select name="price" class="form-control">
                       <option selected="true" disabled="disabled">Max Price (All)</option>
                       {% if states_choices %}
-                            {% for k,v in price_choices.items %}
+                            {% for k,v in price_choices %}
                               <option value="{{k}}"
                               {% if values.price == k  %}
                                     selected
